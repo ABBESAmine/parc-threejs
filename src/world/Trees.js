@@ -50,19 +50,19 @@ export class Trees {
 
     const colorHD = loadGLTFTexture(
       this.textureLoader,
-      './assets/assets/color-512_1.jpg',
+      './assets/color-512_1.jpg',
       true,
       anisotropy
     );
     const normalHD = loadGLTFTexture(
       this.textureLoader,
-      './assets/assets/normal-512.jpg',
+      './assets/normal-512.jpg',
       false,
       anisotropy
     );
     const rmaoHD = loadGLTFTexture(
       this.textureLoader,
-      './assets/assets/rmao-512.jpg',
+      './assets/rmao-512.jpg',
       false,
       anisotropy
     );
@@ -88,12 +88,12 @@ export class Trees {
       metalness: 0
     });
 
-    this.impostorTexture = this.textureLoader.load('./assets/assets/impostor.png');
+    this.impostorTexture = this.textureLoader.load('./assets/impostor.png');
     this.impostorTexture.colorSpace = THREE.SRGBColorSpace;
     this.impostorTexture.anisotropy = anisotropy;
 
     try {
-      const gltf = await this.loader.loadAsync('./assets/assets/tree.glb');
+      const gltf = await this.loader.loadAsync('./assets/tree.glb');
       this.source = gltf.scene;
       this.prepareSource();
     } catch (error) {

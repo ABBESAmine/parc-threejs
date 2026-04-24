@@ -155,6 +155,11 @@ export class Terrain {
     const basinFalloff = 1 - THREE.MathUtils.smoothstep(distanceToBasin, this.basinRadius, this.basinRadius + this.bankWidth);
     const basinShape = Math.max(0, 1 - distanceToBasin / this.basinRadius);
     const basinDepth = basinFalloff * (7.8 + basinShape * 4.6);
+    const waterReach = this.basinRadius + this.bankWidth * 0.9;
+    const shorelineInner = THREE.MathUtils.smoothstep(distanceToBasin, waterReach - 10, waterReach - 2.5);
+    const shorelineOuter = 1 - THREE.MathUtils.smoothstep(distanceToBasin, waterReach - 1.5, waterReach + 6.5);
+    const shorelineRim = shorelineInner * shorelineOuter;
+    const shorelineLift = shorelineRim * 3.8;
 
     return (broad - 0.5) * 15.5
       + (slow - 0.5) * 8.1
@@ -164,6 +169,7 @@ export class Terrain {
       - path * 1.15
       - corridor
       - valley * 1.55
-      - basinDepth;
+      - basinDepth
+      + shorelineLift;
   }
 }

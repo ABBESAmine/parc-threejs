@@ -67,7 +67,7 @@ export class Vegetation {
   }
 
   createMaterial(alphaIndex) {
-    const basePath = './assets/assets';
+    const basePath = './assets';
     return new THREE.MeshStandardMaterial({
       map: this.loadTexture(`${basePath}/BaseColor_bush.png`, THREE.SRGBColorSpace),
       normalMap: this.loadTexture(`${basePath}/Normal_bush.png`),

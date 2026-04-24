@@ -8,7 +8,7 @@ export class Snow {
     this.height = height;
     this.halfArea = area * 0.5;
     this.textureLoader = new THREE.TextureLoader();
-    this.snowflakeTexture = this.textureLoader.load('./assets/assets/snowflake.png');
+    this.snowflakeTexture = this.textureLoader.load('./assets/snowflake.png');
     this.snowflakeTexture.colorSpace = THREE.SRGBColorSpace;
 
     this.positions = new Float32Array(count * 3);
