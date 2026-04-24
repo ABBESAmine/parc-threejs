@@ -2,6 +2,8 @@
 
 Scene de nature en Three.js, sans npm, avec imports CDN.
 
+Demo en ligne : https://abbesamine.github.io/parc-threejs/
+
 ## Lancement
 
 Depuis la racine du projet :
