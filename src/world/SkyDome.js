@@ -11,8 +11,8 @@ export class SkyDome {
     const uniforms = this.mesh.material.uniforms;
     uniforms.turbidity.value = 7.4;
     uniforms.rayleigh.value = 1.35;
-    uniforms.mieCoefficient.value = 0.018;
-    uniforms.mieDirectionalG.value = 0.86;
+    uniforms.mieCoefficient.value = 0.012;
+    uniforms.mieDirectionalG.value = 0.78;
 
     this.setSun(88, 2.2);
 

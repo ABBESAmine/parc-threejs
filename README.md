@@ -18,5 +18,7 @@ Puis ouvrir `http://localhost:8000`.
 - Materiau de sol avec color map, normal map et roughness map procedurales.
 - Herbe en `InstancedMesh`, placee aleatoirement et calee avec `getHeightAt(x, z)`.
 - Ciel procedural avec `Sky.js`, ambiance coucher de soleil proche de `rendu.png`.
+- Buissons en `InstancedMesh` avec textures alpha-testees.
+- Arbres places sur le terrain avec `LOD` : GLB proche, arbre simplifie a moyenne distance, impostor lointain.
 
 Les textures `*_grass.png` du dossier `assets` sont decoupees en 4 tuiles dans `assets/grass_tiles/` et utilisees pour l'herbe.

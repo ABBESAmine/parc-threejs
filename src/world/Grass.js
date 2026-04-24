@@ -52,9 +52,9 @@ export class Grass {
 
   createMaterial(tileIndex) {
     const material = new THREE.MeshStandardMaterial({
-      map: this.loadTexture(`./assets/grass_tiles/color_grass_${tileIndex}.png`, THREE.SRGBColorSpace),
-      normalMap: this.loadTexture(`./assets/grass_tiles/normal_grass_${tileIndex}.png`),
-      roughnessMap: this.loadTexture(`./assets/grass_tiles/rmao_grass_${tileIndex}.png`),
+      map: this.loadTexture(`./assets/assets/grass_tiles/color_grass_${tileIndex}.png`, THREE.SRGBColorSpace),
+      normalMap: this.loadTexture(`./assets/assets/grass_tiles/normal_grass_${tileIndex}.png`),
+      roughnessMap: this.loadTexture(`./assets/assets/grass_tiles/rmao_grass_${tileIndex}.png`),
       normalScale: new THREE.Vector2(0.48, 0.48),
       transparent: true,
       alphaTest: 0.28,
